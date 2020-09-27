@@ -8,3 +8,5 @@ package-lock.json
 lowDB/index.js
 
 /config/index.js
+*.wxapkg
+_*/

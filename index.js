@@ -1,8 +1,23 @@
-let argv = require('yargs').argv
-console.dir(argv)
+const { Wxapkg } = require('./lib/wxapkg')
 
-argv = require('minimist')(process.argv.slice(2), { alias: { s: 'story' } })
-console.dir(argv)
+let argv = require('minimist')(process.argv.slice(2),
+  {
+    alias: {
+      m: 'method', p: 'port', h: 'help', H: 'host',
+      s: 'subpack'
+    }
+  })
 
-// argv = require('optimist').argv
-// console.dir(argv)
+console.log(argv)
+
+if (argv.h) {
+  return console.log(`
+Example usage:
+-H --host     server host ip or dnsName
+-p --port     port of host
+-s --subpack  sub pack unpack
+`)
+}
+
+const apkg = new Wxapkg()
+apkg.start(argv.d)
