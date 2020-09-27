@@ -1,0 +1,10 @@
+node_modules
+*.lock
+ecosystem.config.js
+test/
+cache.json
+.vscode/
+package-lock.json
+lowDB/index.js
+
+/config/index.js
