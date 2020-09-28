@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "minimist": "^1.2.5",
+    "vm2": "^3.9.2",
     "yargs": "^16.0.3"
   }
 }
