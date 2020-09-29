@@ -6,3 +6,7 @@
 2. 'v0.5vv_20200413_syb_scopedata' '\_866082797_274.wxapkg
 3. 'v0.5vv_20190703_syb_scopedata' '\_-148484698_87.wxapkg'
 4. 'v0.6vv_20180111_fbi' 低于此版日期 20180111 可能会出问题
+
+## subpack
+1. "/packageCard/app-service.js"
+2. "/packageCard/page-frame.js"

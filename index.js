@@ -19,5 +19,5 @@ Example usage:
 `)
 }
 
-const apkg = Wxapkg.init(argv.d)
+const apkg = Wxapkg.init(argv)
 apkg.start()
