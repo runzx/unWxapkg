@@ -13,7 +13,7 @@
 1. 可生成基本包文件: app-config.json, app-service.js, page-frame.html, \*.html,
 2. 可生成基本包/分包配置文件: app.json, \*.json
 3. 可生成基本包/分包 wxss 文件 app.wxss, \*.wxss
-4. 可生成基本包 wxml 文件
+4. 可生成基本包/分包 wxml wxs 文件
 
 ## 目录结构
 
