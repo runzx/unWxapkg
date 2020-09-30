@@ -24,6 +24,7 @@
 │   ├── wx-cfg.js       生成xx.json 配置文件
 │   ├── wx-js.js        生成xx.js   业务逻辑文件
 │   ├── wx-xml.js       生成xx.wxml 显示框架文件
+│   ├── wx-restore-z.js Z数组 处理模块
 │   └── wx-css.js       生成xx.wxss css文件
 │
 ├── doc                #  相关文档
