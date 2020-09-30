@@ -1,10 +1,11 @@
 const { Wxapkg } = require('./lib/wxapkg')
+const { Auto } = require('./lib/auto')
 
 let argv = require('minimist')(process.argv.slice(2),
   {
     alias: {
       m: 'more', p: 'port', h: 'help', H: 'host',
-      s: 'subpack'
+      s: 'subpack', a: 'auto'
     }
   })
 
@@ -17,7 +18,13 @@ Example usage:
 -p --port     port of host
 -s --subpack  sub pack unpack
 -m --more     more infomation
+-a --auto     auto uncode all apkg(subs)
 `)
+}
+
+if (argv.a) {
+  const app = Auto.init(argv)
+  return app.start()
 }
 
 const apkg = Wxapkg.init(argv)
