@@ -21,11 +21,16 @@ Example usage:
 -a --auto     auto uncode all apkg(subs)
 `)
 }
+console.time("start")
 
 if (argv.a) {
   const app = Auto.init(argv)
-  return app.start()
+  app.start()
+  console.timeEnd("start")
+  return
 }
 
 const apkg = Wxapkg.init(argv)
 apkg.start()
+
+console.timeEnd("start")
