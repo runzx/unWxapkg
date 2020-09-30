@@ -10,9 +10,9 @@
 
 ## 进度
 
-1. 可生成基本包文件: \*.html, app-config.json,app-service.js,page-frame.html
-2. 可生成基本包/分包配置文件: \*.json, app.json
-3. 可生成基本包/分包 wxss 文件 app.wxss,\*.wxss
+1. 可生成基本包文件: app-config.json, app-service.js, page-frame.html, \*.html,
+2. 可生成基本包/分包配置文件: app.json, \*.json
+3. 可生成基本包/分包 wxss 文件 app.wxss, \*.wxss
 
 ## 目录结构
 
@@ -26,6 +26,8 @@
 │   └── wx-css.js       生成xx.wxss css文件
 │
 ├── doc                #  相关文档
+│   ├── lib.md         用到库 学习要点记录
+│   ├── readmd.md      源码 学习要点记录
 │   └── wxappUnpacker.md  学习对象原readme
 │
 └── index.js            # 主入口
