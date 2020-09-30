@@ -16,6 +16,7 @@
     "esprima": "^4.0.1",
     "js-beautify": "^1.13.0",
     "minimist": "^1.2.5",
+    "uglify-es": "^3.3.9",
     "vm2": "^3.9.2",
     "yargs": "^16.0.3"
   }
