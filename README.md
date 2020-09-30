@@ -11,7 +11,8 @@
 ## 进度
 
 1. 可生成基本包文件: \*.html, app-config.json,app-service.js,page-frame.html
-2. 可生成基本包配置文件: \*.json, app.json
+2. 可生成基本包/分包配置文件: \*.json, app.json
+3. 可生成基本包/分包 wxss 文件 app.wxss,\*.wxss
 
 ## 目录结构
 
