@@ -3,7 +3,7 @@ const { Wxapkg } = require('./lib/wxapkg')
 let argv = require('minimist')(process.argv.slice(2),
   {
     alias: {
-      m: 'method', p: 'port', h: 'help', H: 'host',
+      m: 'more', p: 'port', h: 'help', H: 'host',
       s: 'subpack'
     }
   })
@@ -16,6 +16,7 @@ Example usage:
 -H --host     server host ip or dnsName
 -p --port     port of host
 -s --subpack  sub pack unpack
+-m --more     more infomation
 `)
 }
 
