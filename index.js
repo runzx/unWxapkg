@@ -24,13 +24,12 @@ Example usage:
 console.time("start")
 
 if (argv.a) {
-  const app = Auto.init(argv)
-  app.start()
+  Auto.init(argv).start()
+
   console.timeEnd("start")
   return
 }
 
-const apkg = Wxapkg.init(argv)
-apkg.start()
+Wxapkg.init(argv).start()
 
 console.timeEnd("start")
