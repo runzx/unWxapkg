@@ -1,0 +1,2245 @@
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var cityData = [ {
+    baseCityName: "北京市",
+    cityName: "北京市",
+    cityCode: "110100",
+    provinceName: "北京市",
+    provinceCode: "110000"
+}, {
+    baseCityName: "天津市",
+    cityName: "天津市",
+    cityCode: "120100",
+    provinceName: "天津市",
+    provinceCode: "120000"
+}, {
+    baseCityName: "石家庄市",
+    cityName: "石家庄市",
+    cityCode: "130100",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "唐山市",
+    cityName: "唐山市",
+    cityCode: "130200",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "秦皇岛市",
+    cityName: "秦皇岛市",
+    cityCode: "130300",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "邯郸市",
+    cityName: "邯郸市",
+    cityCode: "130400",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "邢台市",
+    cityName: "邢台市",
+    cityCode: "130500",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "保定市",
+    cityName: "保定市",
+    cityCode: "130600",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "张家口市",
+    cityName: "张家口市",
+    cityCode: "130700",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "承德市",
+    cityName: "承德市",
+    cityCode: "130800",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "沧州市",
+    cityName: "沧州市",
+    cityCode: "130900",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "廊坊市",
+    cityName: "廊坊市",
+    cityCode: "131000",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "衡水市",
+    cityName: "衡水市",
+    cityCode: "131100",
+    provinceName: "河北省",
+    provinceCode: "130000"
+}, {
+    baseCityName: "太原市",
+    cityName: "太原市",
+    cityCode: "140100",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "大同市",
+    cityName: "大同市",
+    cityCode: "140200",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "阳泉市",
+    cityName: "阳泉市",
+    cityCode: "140300",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "长治市",
+    cityName: "长治市",
+    cityCode: "140400",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "晋城市",
+    cityName: "晋城市",
+    cityCode: "140500",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "朔州市",
+    cityName: "朔州市",
+    cityCode: "140600",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "晋中市",
+    cityName: "晋中市",
+    cityCode: "140700",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "运城市",
+    cityName: "运城市",
+    cityCode: "140800",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "忻州市",
+    cityName: "忻州市",
+    cityCode: "140900",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "临汾市",
+    cityName: "临汾市",
+    cityCode: "141000",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "吕梁市",
+    cityName: "吕梁市",
+    cityCode: "141100",
+    provinceName: "山西省",
+    provinceCode: "140000"
+}, {
+    baseCityName: "呼和浩特市",
+    cityName: "呼和浩特市",
+    cityCode: "150100",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "包头市",
+    cityName: "包头市",
+    cityCode: "150200",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "乌海市",
+    cityName: "乌海市",
+    cityCode: "150300",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "赤峰市",
+    cityName: "赤峰市",
+    cityCode: "150400",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "通辽市",
+    cityName: "通辽市",
+    cityCode: "150500",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "鄂尔多斯市",
+    cityName: "鄂尔多斯市",
+    cityCode: "150600",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "呼伦贝尔市",
+    cityName: "呼伦贝尔市",
+    cityCode: "150700",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "巴彦淖尔市",
+    cityName: "巴彦淖尔市",
+    cityCode: "150800",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "乌兰察布市",
+    cityName: "乌兰察布市",
+    cityCode: "150900",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "兴安盟",
+    cityName: "兴安盟",
+    cityCode: "152200",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "锡林郭勒盟",
+    cityName: "锡林郭勒盟",
+    cityCode: "152500",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "阿拉善盟",
+    cityName: "阿拉善盟",
+    cityCode: "152900",
+    provinceName: "内蒙古自治区",
+    provinceCode: "150000"
+}, {
+    baseCityName: "沈阳市",
+    cityName: "沈阳市",
+    cityCode: "210100",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "大连市",
+    cityName: "大连市",
+    cityCode: "210200",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "鞍山市",
+    cityName: "鞍山市",
+    cityCode: "210300",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "抚顺市",
+    cityName: "抚顺市",
+    cityCode: "210400",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "本溪市",
+    cityName: "本溪市",
+    cityCode: "210500",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "丹东市",
+    cityName: "丹东市",
+    cityCode: "210600",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "锦州市",
+    cityName: "锦州市",
+    cityCode: "210700",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "营口市",
+    cityName: "营口市",
+    cityCode: "210800",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "阜新市",
+    cityName: "阜新市",
+    cityCode: "210900",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "辽阳市",
+    cityName: "辽阳市",
+    cityCode: "211000",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "盘锦市",
+    cityName: "盘锦市",
+    cityCode: "211100",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "铁岭市",
+    cityName: "铁岭市",
+    cityCode: "211200",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "朝阳市",
+    cityName: "朝阳市",
+    cityCode: "211300",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "葫芦岛市",
+    cityName: "葫芦岛市",
+    cityCode: "211400",
+    provinceName: "辽宁省",
+    provinceCode: "210000"
+}, {
+    baseCityName: "长春市",
+    cityName: "长春市",
+    cityCode: "220100",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "吉林市",
+    cityName: "吉林市",
+    cityCode: "220200",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "四平市",
+    cityName: "四平市",
+    cityCode: "220300",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "辽源市",
+    cityName: "辽源市",
+    cityCode: "220400",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "通化市",
+    cityName: "通化市",
+    cityCode: "220500",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "白山市",
+    cityName: "白山市",
+    cityCode: "220600",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "松原市",
+    cityName: "松原市",
+    cityCode: "220700",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "白城市",
+    cityName: "白城市",
+    cityCode: "220800",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "延边州",
+    cityName: "延边朝鲜族自治州",
+    cityCode: "222400",
+    provinceName: "吉林省",
+    provinceCode: "220000"
+}, {
+    baseCityName: "哈尔滨市",
+    cityName: "哈尔滨市",
+    cityCode: "230100",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "齐齐哈尔市",
+    cityName: "齐齐哈尔市",
+    cityCode: "230200",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "鸡西市",
+    cityName: "鸡西市",
+    cityCode: "230300",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "鹤岗市",
+    cityName: "鹤岗市",
+    cityCode: "230400",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "双鸭山市",
+    cityName: "双鸭山市",
+    cityCode: "230500",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "大庆市",
+    cityName: "大庆市",
+    cityCode: "230600",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "伊春市",
+    cityName: "伊春市",
+    cityCode: "230700",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "佳木斯市",
+    cityName: "佳木斯市",
+    cityCode: "230800",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "七台河市",
+    cityName: "七台河市",
+    cityCode: "230900",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "牡丹江市",
+    cityName: "牡丹江市",
+    cityCode: "231000",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "黑河市",
+    cityName: "黑河市",
+    cityCode: "231100",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "绥化市",
+    cityName: "绥化市",
+    cityCode: "231200",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "大兴安岭地区",
+    cityName: "大兴安岭地区",
+    cityCode: "232700",
+    provinceName: "黑龙江省",
+    provinceCode: "230000"
+}, {
+    baseCityName: "上海市",
+    cityName: "上海市",
+    cityCode: "310100",
+    provinceName: "上海市",
+    provinceCode: "310000"
+}, {
+    baseCityName: "南京市",
+    cityName: "南京市",
+    cityCode: "320100",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "无锡市",
+    cityName: "无锡市",
+    cityCode: "320200",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "徐州市",
+    cityName: "徐州市",
+    cityCode: "320300",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "常州市",
+    cityName: "常州市",
+    cityCode: "320400",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "苏州市",
+    cityName: "苏州市",
+    cityCode: "320500",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "南通市",
+    cityName: "南通市",
+    cityCode: "320600",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "连云港市",
+    cityName: "连云港市",
+    cityCode: "320700",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "淮安市",
+    cityName: "淮安市",
+    cityCode: "320800",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "盐城市",
+    cityName: "盐城市",
+    cityCode: "320900",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "扬州市",
+    cityName: "扬州市",
+    cityCode: "321000",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "镇江市",
+    cityName: "镇江市",
+    cityCode: "321100",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "泰州市",
+    cityName: "泰州市",
+    cityCode: "321200",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "宿迁市",
+    cityName: "宿迁市",
+    cityCode: "321300",
+    provinceName: "江苏省",
+    provinceCode: "320000"
+}, {
+    baseCityName: "杭州市",
+    cityName: "杭州市",
+    cityCode: "330100",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "宁波市",
+    cityName: "宁波市",
+    cityCode: "330200",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "温州市",
+    cityName: "温州市",
+    cityCode: "330300",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "嘉兴市",
+    cityName: "嘉兴市",
+    cityCode: "330400",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "湖州市",
+    cityName: "湖州市",
+    cityCode: "330500",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "绍兴市",
+    cityName: "绍兴市",
+    cityCode: "330600",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "金华市",
+    cityName: "金华市",
+    cityCode: "330700",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "衢州市",
+    cityName: "衢州市",
+    cityCode: "330800",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "舟山市",
+    cityName: "舟山市",
+    cityCode: "330900",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "台州市",
+    cityName: "台州市",
+    cityCode: "331000",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "丽水市",
+    cityName: "丽水市",
+    cityCode: "331100",
+    provinceName: "浙江省",
+    provinceCode: "330000"
+}, {
+    baseCityName: "合肥市",
+    cityName: "合肥市",
+    cityCode: "340100",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "芜湖市",
+    cityName: "芜湖市",
+    cityCode: "340200",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "蚌埠市",
+    cityName: "蚌埠市",
+    cityCode: "340300",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "淮南市",
+    cityName: "淮南市",
+    cityCode: "340400",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "马鞍山市",
+    cityName: "马鞍山市",
+    cityCode: "340500",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "淮北市",
+    cityName: "淮北市",
+    cityCode: "340600",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "铜陵市",
+    cityName: "铜陵市",
+    cityCode: "340700",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "安庆市",
+    cityName: "安庆市",
+    cityCode: "340800",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "黄山市",
+    cityName: "黄山市",
+    cityCode: "341000",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "滁州市",
+    cityName: "滁州市",
+    cityCode: "341100",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "阜阳市",
+    cityName: "阜阳市",
+    cityCode: "341200",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "宿州市",
+    cityName: "宿州市",
+    cityCode: "341300",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "六安市",
+    cityName: "六安市",
+    cityCode: "341500",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "亳州市",
+    cityName: "亳州市",
+    cityCode: "341600",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "池州市",
+    cityName: "池州市",
+    cityCode: "341700",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "宣城市",
+    cityName: "宣城市",
+    cityCode: "341800",
+    provinceName: "安徽省",
+    provinceCode: "340000"
+}, {
+    baseCityName: "福州市",
+    cityName: "福州市",
+    cityCode: "350100",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "厦门市",
+    cityName: "厦门市",
+    cityCode: "350200",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "莆田市",
+    cityName: "莆田市",
+    cityCode: "350300",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "三明市",
+    cityName: "三明市",
+    cityCode: "350400",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "泉州市",
+    cityName: "泉州市",
+    cityCode: "350500",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "漳州市",
+    cityName: "漳州市",
+    cityCode: "350600",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "南平市",
+    cityName: "南平市",
+    cityCode: "350700",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "龙岩市",
+    cityName: "龙岩市",
+    cityCode: "350800",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "宁德市",
+    cityName: "宁德市",
+    cityCode: "350900",
+    provinceName: "福建省",
+    provinceCode: "350000"
+}, {
+    baseCityName: "南昌市",
+    cityName: "南昌市",
+    cityCode: "360100",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "景德镇市",
+    cityName: "景德镇市",
+    cityCode: "360200",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "萍乡市",
+    cityName: "萍乡市",
+    cityCode: "360300",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "九江市",
+    cityName: "九江市",
+    cityCode: "360400",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "新余市",
+    cityName: "新余市",
+    cityCode: "360500",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "鹰潭市",
+    cityName: "鹰潭市",
+    cityCode: "360600",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "赣州市",
+    cityName: "赣州市",
+    cityCode: "360700",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "吉安市",
+    cityName: "吉安市",
+    cityCode: "360800",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "宜春市",
+    cityName: "宜春市",
+    cityCode: "360900",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "抚州市",
+    cityName: "抚州市",
+    cityCode: "361000",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "上饶市",
+    cityName: "上饶市",
+    cityCode: "361100",
+    provinceName: "江西省",
+    provinceCode: "360000"
+}, {
+    baseCityName: "济南市",
+    cityName: "济南市",
+    cityCode: "370100",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "青岛市",
+    cityName: "青岛市",
+    cityCode: "370200",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "淄博市",
+    cityName: "淄博市",
+    cityCode: "370300",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "枣庄市",
+    cityName: "枣庄市",
+    cityCode: "370400",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "东营市",
+    cityName: "东营市",
+    cityCode: "370500",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "烟台市",
+    cityName: "烟台市",
+    cityCode: "370600",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "潍坊市",
+    cityName: "潍坊市",
+    cityCode: "370700",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "济宁市",
+    cityName: "济宁市",
+    cityCode: "370800",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "泰安市",
+    cityName: "泰安市",
+    cityCode: "370900",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "威海市",
+    cityName: "威海市",
+    cityCode: "371000",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "日照市",
+    cityName: "日照市",
+    cityCode: "371100",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "临沂市",
+    cityName: "临沂市",
+    cityCode: "371300",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "德州市",
+    cityName: "德州市",
+    cityCode: "371400",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "聊城市",
+    cityName: "聊城市",
+    cityCode: "371500",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "滨州市",
+    cityName: "滨州市",
+    cityCode: "371600",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "菏泽市",
+    cityName: "菏泽市",
+    cityCode: "371700",
+    provinceName: "山东省",
+    provinceCode: "370000"
+}, {
+    baseCityName: "郑州市",
+    cityName: "郑州市",
+    cityCode: "410100",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "开封市",
+    cityName: "开封市",
+    cityCode: "410200",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "洛阳市",
+    cityName: "洛阳市",
+    cityCode: "410300",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "平顶山市",
+    cityName: "平顶山市",
+    cityCode: "410400",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "安阳市",
+    cityName: "安阳市",
+    cityCode: "410500",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "鹤壁市",
+    cityName: "鹤壁市",
+    cityCode: "410600",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "新乡市",
+    cityName: "新乡市",
+    cityCode: "410700",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "焦作市",
+    cityName: "焦作市",
+    cityCode: "410800",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "濮阳市",
+    cityName: "濮阳市",
+    cityCode: "410900",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "许昌市",
+    cityName: "许昌市",
+    cityCode: "411000",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "漯河市",
+    cityName: "漯河市",
+    cityCode: "411100",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "三门峡市",
+    cityName: "三门峡市",
+    cityCode: "411200",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "南阳市",
+    cityName: "南阳市",
+    cityCode: "411300",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "商丘市",
+    cityName: "商丘市",
+    cityCode: "411400",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "信阳市",
+    cityName: "信阳市",
+    cityCode: "411500",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "周口市",
+    cityName: "周口市",
+    cityCode: "411600",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "驻马店市",
+    cityName: "驻马店市",
+    cityCode: "411700",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "济源市",
+    cityName: "济源市",
+    cityCode: "419001",
+    provinceName: "河南省",
+    provinceCode: "410000"
+}, {
+    baseCityName: "武汉市",
+    cityName: "武汉市",
+    cityCode: "420100",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "黄石市",
+    cityName: "黄石市",
+    cityCode: "420200",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "十堰市",
+    cityName: "十堰市",
+    cityCode: "420300",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "宜昌市",
+    cityName: "宜昌市",
+    cityCode: "420500",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "襄樊市",
+    cityName: "襄阳市",
+    cityCode: "420600",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "鄂州市",
+    cityName: "鄂州市",
+    cityCode: "420700",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "荆门市",
+    cityName: "荆门市",
+    cityCode: "420800",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "孝感市",
+    cityName: "孝感市",
+    cityCode: "420900",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "荆州市",
+    cityName: "荆州市",
+    cityCode: "421000",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "黄冈市",
+    cityName: "黄冈市",
+    cityCode: "421100",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "咸宁市",
+    cityName: "咸宁市",
+    cityCode: "421200",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "随州市",
+    cityName: "随州市",
+    cityCode: "421300",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "恩施土家族苗族自治州",
+    cityName: "恩施土家族苗族自治州",
+    cityCode: "422800",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "仙桃市",
+    cityName: "仙桃市",
+    cityCode: "429004",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "潜江市",
+    cityName: "潜江市",
+    cityCode: "429005",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "天门市",
+    cityName: "天门市",
+    cityCode: "429006",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "神农架林区",
+    cityName: "神农架林区",
+    cityCode: "429021",
+    provinceName: "湖北省",
+    provinceCode: "420000"
+}, {
+    baseCityName: "长沙市",
+    cityName: "长沙市",
+    cityCode: "430100",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "株洲市",
+    cityName: "株洲市",
+    cityCode: "430200",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "湘潭市",
+    cityName: "湘潭市",
+    cityCode: "430300",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "衡阳市",
+    cityName: "衡阳市",
+    cityCode: "430400",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "邵阳市",
+    cityName: "邵阳市",
+    cityCode: "430500",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "岳阳市",
+    cityName: "岳阳市",
+    cityCode: "430600",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "常德市",
+    cityName: "常德市",
+    cityCode: "430700",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "张家界市",
+    cityName: "张家界市",
+    cityCode: "430800",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "益阳市",
+    cityName: "益阳市",
+    cityCode: "430900",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "郴州市",
+    cityName: "郴州市",
+    cityCode: "431000",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "永州市",
+    cityName: "永州市",
+    cityCode: "431100",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "怀化市",
+    cityName: "怀化市",
+    cityCode: "431200",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "娄底市",
+    cityName: "娄底市",
+    cityCode: "431300",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "湘西土家族苗族自治州",
+    cityName: "湘西土家族苗族自治州",
+    cityCode: "433100",
+    provinceName: "湖南省",
+    provinceCode: "430000"
+}, {
+    baseCityName: "广州市",
+    cityName: "广州市",
+    cityCode: "440100",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "韶关市",
+    cityName: "韶关市",
+    cityCode: "440200",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "深圳市",
+    cityName: "深圳市",
+    cityCode: "440300",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "珠海市",
+    cityName: "珠海市",
+    cityCode: "440400",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "汕头市",
+    cityName: "汕头市",
+    cityCode: "440500",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "佛山市",
+    cityName: "佛山市",
+    cityCode: "440600",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "江门市",
+    cityName: "江门市",
+    cityCode: "440700",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "湛江市",
+    cityName: "湛江市",
+    cityCode: "440800",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "茂名市",
+    cityName: "茂名市",
+    cityCode: "440900",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "肇庆市",
+    cityName: "肇庆市",
+    cityCode: "441200",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "惠州市",
+    cityName: "惠州市",
+    cityCode: "441300",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "梅州市",
+    cityName: "梅州市",
+    cityCode: "441400",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "汕尾市",
+    cityName: "汕尾市",
+    cityCode: "441500",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "河源市",
+    cityName: "河源市",
+    cityCode: "441600",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "阳江市",
+    cityName: "阳江市",
+    cityCode: "441700",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "清远市",
+    cityName: "清远市",
+    cityCode: "441800",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "东莞市",
+    cityName: "东莞市",
+    cityCode: "441900",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "中山市",
+    cityName: "中山市",
+    cityCode: "442000",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "潮州市",
+    cityName: "潮州市",
+    cityCode: "445100",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "揭阳市",
+    cityName: "揭阳市",
+    cityCode: "445200",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "云浮市",
+    cityName: "云浮市",
+    cityCode: "445300",
+    provinceName: "广东省",
+    provinceCode: "440000"
+}, {
+    baseCityName: "南宁市",
+    cityName: "南宁市",
+    cityCode: "450100",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "柳州市",
+    cityName: "柳州市",
+    cityCode: "450200",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "桂林市",
+    cityName: "桂林市",
+    cityCode: "450300",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "梧州市",
+    cityName: "梧州市",
+    cityCode: "450400",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "北海市",
+    cityName: "北海市",
+    cityCode: "450500",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "防城港市",
+    cityName: "防城港市",
+    cityCode: "450600",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "钦州市",
+    cityName: "钦州市",
+    cityCode: "450700",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "贵港市",
+    cityName: "贵港市",
+    cityCode: "450800",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "玉林市",
+    cityName: "玉林市",
+    cityCode: "450900",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "百色市",
+    cityName: "百色市",
+    cityCode: "451000",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "贺州市",
+    cityName: "贺州市",
+    cityCode: "451100",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "河池市",
+    cityName: "河池市",
+    cityCode: "451200",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "来宾市",
+    cityName: "来宾市",
+    cityCode: "451300",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "崇左市",
+    cityName: "崇左市",
+    cityCode: "451400",
+    provinceName: "广西壮族自治区",
+    provinceCode: "450000"
+}, {
+    baseCityName: "海口市",
+    cityName: "海口市",
+    cityCode: "460100",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "三亚市",
+    cityName: "三亚市",
+    cityCode: "460200",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "三沙市",
+    cityName: "三沙市",
+    cityCode: "460300",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "儋州市",
+    cityName: "儋州市",
+    cityCode: "460400",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "五指山市",
+    cityName: "五指山市",
+    cityCode: "469001",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "琼海市",
+    cityName: "琼海市",
+    cityCode: "469002",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "文昌市",
+    cityName: "文昌市",
+    cityCode: "469005",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "万宁市",
+    cityName: "万宁市",
+    cityCode: "469006",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "东方市",
+    cityName: "东方市",
+    cityCode: "469007",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "定安县",
+    cityName: "定安县",
+    cityCode: "469021",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "屯昌县",
+    cityName: "屯昌县",
+    cityCode: "469022",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "澄迈县",
+    cityName: "澄迈县",
+    cityCode: "469023",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "临高县",
+    cityName: "临高县",
+    cityCode: "469024",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "白沙黎族自治县",
+    cityName: "白沙黎族自治县",
+    cityCode: "469025",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "昌江黎族自治县",
+    cityName: "昌江黎族自治县",
+    cityCode: "469026",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "乐东黎族自治县",
+    cityName: "乐东黎族自治县",
+    cityCode: "469027",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "陵水黎族自治县",
+    cityName: "陵水黎族自治县",
+    cityCode: "469028",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "保亭黎族苗族自治县",
+    cityName: "保亭黎族苗族自治县",
+    cityCode: "469029",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "琼中黎族苗族自治县",
+    cityName: "琼中黎族苗族自治县",
+    cityCode: "469030",
+    provinceName: "海南省",
+    provinceCode: "460000"
+}, {
+    baseCityName: "重庆市",
+    cityName: "重庆市",
+    cityCode: "500000",
+    provinceName: "重庆市",
+    provinceCode: "500000"
+}, {
+    baseCityName: "成都市",
+    cityName: "成都市",
+    cityCode: "510100",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "自贡市",
+    cityName: "自贡市",
+    cityCode: "510300",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "攀枝花市",
+    cityName: "攀枝花市",
+    cityCode: "510400",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "泸州市",
+    cityName: "泸州市",
+    cityCode: "510500",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "德阳市",
+    cityName: "德阳市",
+    cityCode: "510600",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "绵阳市",
+    cityName: "绵阳市",
+    cityCode: "510700",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "广元市",
+    cityName: "广元市",
+    cityCode: "510800",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "遂宁市",
+    cityName: "遂宁市",
+    cityCode: "510900",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "内江市",
+    cityName: "内江市",
+    cityCode: "511000",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "乐山市",
+    cityName: "乐山市",
+    cityCode: "511100",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "南充市",
+    cityName: "南充市",
+    cityCode: "511300",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "眉山市",
+    cityName: "眉山市",
+    cityCode: "511400",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "宜宾市",
+    cityName: "宜宾市",
+    cityCode: "511500",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "广安市",
+    cityName: "广安市",
+    cityCode: "511600",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "达州市",
+    cityName: "达州市",
+    cityCode: "511700",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "雅安市",
+    cityName: "雅安市",
+    cityCode: "511800",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "巴中市",
+    cityName: "巴中市",
+    cityCode: "511900",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "资阳市",
+    cityName: "资阳市",
+    cityCode: "512000",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "阿坝州",
+    cityName: "阿坝藏族羌族自治州",
+    cityCode: "513200",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "甘孜州",
+    cityName: "甘孜藏族自治州",
+    cityCode: "513300",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "凉山州",
+    cityName: "凉山彝族自治州",
+    cityCode: "513400",
+    provinceName: "四川省",
+    provinceCode: "510000"
+}, {
+    baseCityName: "贵阳市",
+    cityName: "贵阳市",
+    cityCode: "520100",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "六盘水市",
+    cityName: "六盘水市",
+    cityCode: "520200",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "遵义市",
+    cityName: "遵义市",
+    cityCode: "520300",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "安顺市",
+    cityName: "安顺市",
+    cityCode: "520400",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "毕节地区",
+    cityName: "毕节市",
+    cityCode: "520500",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "铜仁地区",
+    cityName: "铜仁市",
+    cityCode: "520600",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "黔西南州",
+    cityName: "黔西南布依族苗族自治州",
+    cityCode: "522300",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "黔东南州",
+    cityName: "黔东南苗族侗族自治州",
+    cityCode: "522600",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "黔南州",
+    cityName: "黔南布依族苗族自治州",
+    cityCode: "522700",
+    provinceName: "贵州省",
+    provinceCode: "520000"
+}, {
+    baseCityName: "昆明市",
+    cityName: "昆明市",
+    cityCode: "530100",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "曲靖市",
+    cityName: "曲靖市",
+    cityCode: "530300",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "玉溪市",
+    cityName: "玉溪市",
+    cityCode: "530400",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "保山市",
+    cityName: "保山市",
+    cityCode: "530500",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "昭通市",
+    cityName: "昭通市",
+    cityCode: "530600",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "丽江市",
+    cityName: "丽江市",
+    cityCode: "530700",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "思茅市",
+    cityName: "普洱市",
+    cityCode: "530800",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "临沧市",
+    cityName: "临沧市",
+    cityCode: "530900",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "楚雄州",
+    cityName: "楚雄彝族自治州",
+    cityCode: "532300",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "红河哈尼族彝族自治州",
+    cityName: "红河哈尼族彝族自治州",
+    cityCode: "532500",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "文山壮族苗族自治州",
+    cityName: "文山壮族苗族自治州",
+    cityCode: "532600",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "西双版纳傣族自治州",
+    cityName: "西双版纳傣族自治州",
+    cityCode: "532800",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "大理州",
+    cityName: "大理白族自治州",
+    cityCode: "532900",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "德宏傣族景颇族自治州",
+    cityName: "德宏傣族景颇族自治州",
+    cityCode: "533100",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "怒江傈僳族自治州",
+    cityName: "怒江傈僳族自治州",
+    cityCode: "533300",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "迪庆州",
+    cityName: "迪庆藏族自治州",
+    cityCode: "533400",
+    provinceName: "云南省",
+    provinceCode: "530000"
+}, {
+    baseCityName: "拉萨市",
+    cityName: "拉萨市",
+    cityCode: "540100",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "日喀则地区",
+    cityName: "日喀则市",
+    cityCode: "540200",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "昌都地区",
+    cityName: "昌都市",
+    cityCode: "540300",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "林芝地区",
+    cityName: "林芝市",
+    cityCode: "540400",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "山南地区",
+    cityName: "山南市",
+    cityCode: "540500",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "那曲地区",
+    cityName: "那曲市",
+    cityCode: "540600",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "阿里地区",
+    cityName: "阿里地区",
+    cityCode: "542500",
+    provinceName: "西藏自治区",
+    provinceCode: "540000"
+}, {
+    baseCityName: "西安市",
+    cityName: "西安市",
+    cityCode: "610100",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "铜川市",
+    cityName: "铜川市",
+    cityCode: "610200",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "宝鸡市",
+    cityName: "宝鸡市",
+    cityCode: "610300",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "咸阳市",
+    cityName: "咸阳市",
+    cityCode: "610400",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "渭南市",
+    cityName: "渭南市",
+    cityCode: "610500",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "延安市",
+    cityName: "延安市",
+    cityCode: "610600",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "汉中市",
+    cityName: "汉中市",
+    cityCode: "610700",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "榆林市",
+    cityName: "榆林市",
+    cityCode: "610800",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "安康市",
+    cityName: "安康市",
+    cityCode: "610900",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "商洛市",
+    cityName: "商洛市",
+    cityCode: "611000",
+    provinceName: "陕西省",
+    provinceCode: "610000"
+}, {
+    baseCityName: "兰州市",
+    cityName: "兰州市",
+    cityCode: "620100",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "嘉峪关市",
+    cityName: "嘉峪关市",
+    cityCode: "620200",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "金昌市",
+    cityName: "金昌市",
+    cityCode: "620300",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "白银市",
+    cityName: "白银市",
+    cityCode: "620400",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "天水市",
+    cityName: "天水市",
+    cityCode: "620500",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "武威市",
+    cityName: "武威市",
+    cityCode: "620600",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "张掖市",
+    cityName: "张掖市",
+    cityCode: "620700",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "平凉市",
+    cityName: "平凉市",
+    cityCode: "620800",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "酒泉市",
+    cityName: "酒泉市",
+    cityCode: "620900",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "庆阳市",
+    cityName: "庆阳市",
+    cityCode: "621000",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "定西市",
+    cityName: "定西市",
+    cityCode: "621100",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "陇南市",
+    cityName: "陇南市",
+    cityCode: "621200",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "临夏回族自治州",
+    cityName: "临夏回族自治州",
+    cityCode: "622900",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "甘南州",
+    cityName: "甘南藏族自治州",
+    cityCode: "623000",
+    provinceName: "甘肃省",
+    provinceCode: "620000"
+}, {
+    baseCityName: "西宁市",
+    cityName: "西宁市",
+    cityCode: "630100",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "海东地区",
+    cityName: "海东市",
+    cityCode: "630200",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "海北州",
+    cityName: "海北藏族自治州",
+    cityCode: "632200",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "黄南州",
+    cityName: "黄南藏族自治州",
+    cityCode: "632300",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "海南州",
+    cityName: "海南藏族自治州",
+    cityCode: "632500",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "果洛州",
+    cityName: "果洛藏族自治州",
+    cityCode: "632600",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "玉树州",
+    cityName: "玉树藏族自治州",
+    cityCode: "632700",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "海西州",
+    cityName: "海西蒙古族藏族自治州",
+    cityCode: "632800",
+    provinceName: "青海省",
+    provinceCode: "630000"
+}, {
+    baseCityName: "银川市",
+    cityName: "银川市",
+    cityCode: "640100",
+    provinceName: "宁夏回族自治区",
+    provinceCode: "640000"
+}, {
+    baseCityName: "石嘴山市",
+    cityName: "石嘴山市",
+    cityCode: "640200",
+    provinceName: "宁夏回族自治区",
+    provinceCode: "640000"
+}, {
+    baseCityName: "吴忠市",
+    cityName: "吴忠市",
+    cityCode: "640300",
+    provinceName: "宁夏回族自治区",
+    provinceCode: "640000"
+}, {
+    baseCityName: "固原市",
+    cityName: "固原市",
+    cityCode: "640400",
+    provinceName: "宁夏回族自治区",
+    provinceCode: "640000"
+}, {
+    baseCityName: "中卫市",
+    cityName: "中卫市",
+    cityCode: "640500",
+    provinceName: "宁夏回族自治区",
+    provinceCode: "640000"
+}, {
+    baseCityName: "乌鲁木齐市",
+    cityName: "乌鲁木齐市",
+    cityCode: "650100",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "克拉玛依市",
+    cityName: "克拉玛依市",
+    cityCode: "650200",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "吐鲁番地区",
+    cityName: "吐鲁番市",
+    cityCode: "650400",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "哈密地区",
+    cityName: "哈密市",
+    cityCode: "650500",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "昌吉回族自治州",
+    cityName: "昌吉回族自治州",
+    cityCode: "652300",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "博尔塔拉州",
+    cityName: "博尔塔拉蒙古自治州",
+    cityCode: "652700",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "巴音郭楞州",
+    cityName: "巴音郭楞蒙古自治州",
+    cityCode: "652800",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "阿克苏地区",
+    cityName: "阿克苏地区",
+    cityCode: "652900",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "克孜勒苏柯尔克孜自治州",
+    cityName: "克孜勒苏柯尔克孜自治州",
+    cityCode: "653000",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "喀什地区",
+    cityName: "喀什地区",
+    cityCode: "653100",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "和田地区",
+    cityName: "和田地区",
+    cityCode: "653200",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "伊犁哈萨克自治州",
+    cityName: "伊犁哈萨克自治州",
+    cityCode: "654000",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "塔城地区",
+    cityName: "塔城地区",
+    cityCode: "654200",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "阿勒泰地区",
+    cityName: "阿勒泰地区",
+    cityCode: "654300",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "石河子市",
+    cityName: "石河子市",
+    cityCode: "659001",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "阿拉尔市",
+    cityName: "阿拉尔市",
+    cityCode: "659002",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "图木舒克市",
+    cityName: "图木舒克市",
+    cityCode: "659003",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "五家渠市",
+    cityName: "五家渠市",
+    cityCode: "659004",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "北屯市",
+    cityName: "北屯市",
+    cityCode: "659005",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "铁门关市",
+    cityName: "铁门关市",
+    cityCode: "659006",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "双河市",
+    cityName: "双河市",
+    cityCode: "659007",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "可克达拉市",
+    cityName: "可克达拉市",
+    cityCode: "659008",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+}, {
+    baseCityName: "昆玉市",
+    cityName: "昆玉市",
+    cityCode: "659009",
+    provinceName: "新疆维吾尔自治区",
+    provinceCode: "650000"
+} ];
+
+exports.default = {
+    getProvinceList: function getProvinceList() {
+        var provinceList = [];
+        cityData.forEach(function(item) {
+            if (provinceList.indexOf(item.provinceName) == -1) {
+                provinceList.push(item.provinceName);
+            }
+        });
+        return provinceList;
+    },
+    getCityList: function getCityList(provinceName) {
+        var cityList = [];
+        cityData.forEach(function(item) {
+            if (item.provinceName == provinceName) {
+                cityList.push(item.cityName);
+            }
+        });
+        return cityList;
+    },
+    getCityCode: function getCityCode(provinceName, cityName) {
+        var cityInfo = cityData.find(function(item) {
+            return item.cityName == cityName && item.provinceName == provinceName;
+        });
+        if (cityInfo) {
+            return cityInfo.cityCode;
+        }
+        return "";
+    },
+    getCityInfoByCode: function getCityInfoByCode(cityCode) {
+        var cityInfo = cityData.find(function(item) {
+            return item.cityCode == cityCode;
+        });
+        if (cityInfo) {
+            return {
+                cityName: cityInfo.cityName,
+                cityCode: cityInfo.cityCode,
+                provinceName: cityInfo.provinceName,
+                provinceCode: cityInfo.provinceCode
+            };
+        }
+        return "";
+    }
+};
